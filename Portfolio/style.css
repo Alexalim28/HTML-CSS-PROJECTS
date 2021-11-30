@@ -1,0 +1,112 @@
+:root {
+    --bg-red : rgba(214, 35, 60);
+    --white: rgba(247, 249, 249);
+    --dark-grey: #333333;
+}
+
+*, html {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#navbar {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background: var(--bg-red);
+    box-shadow: 0 2px #000;
+    text-align: right;  
+    padding: 0 35px;
+}
+
+#navbar a {
+    display: inline-block;
+    height: 100%;
+    font-size: 22px;
+    color: var(--white);
+    text-decoration: none;
+    padding: 0 20px;
+    line-height: 65px;
+    
+}
+
+#navbar a:hover{
+    background: rgba(40, 116, 166, 0.793);
+}
+
+#welcome-section {
+    background: var(--dark-grey);
+    height: 100vh;
+    text-align: center;
+}
+
+#welcome-section h1 {
+   font-size: 3.5em;
+   font-weight: 600;
+   color: var(--white);
+   padding-top: 200px;
+   margin-bottom: 25px;
+}
+
+#welcome-section h2 {
+    color: var(--bg-red);
+    font-weight: 100;
+    font-size: 2em;
+}
+
+#projects {
+    display: flex;
+    background: #364f6b;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#projects h1 {
+    position: relative;
+    font-size: 2.5em;
+    font-weight: 500;
+    color: var(--white);
+    padding-top: 150px;
+ }
+
+ #projects h1::after {
+     position: absolute;
+     bottom: -8px;
+     left: 28%;
+     content: " ";
+     height: 2px;
+     width: 44.5%;
+     background: var(--white);   
+ }
+
+ .project-tile {
+    width: 25%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+ }
+
+ .tile {
+     height: 500px;
+     background: #FFF;
+ }
+
+ .tile p {
+    color: pink;
+    text-decoration: none;
+ }
+
+ #profile-link{
+     color: #000;
+     text-decoration: none;
+ }
+
+
+ @media only screen and (max-width: 880px) {
+    #projects {
+        flex-direction: column;
+    }
+ }
+
+ 

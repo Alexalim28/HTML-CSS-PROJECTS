@@ -1,0 +1,232 @@
+:root {
+    --bg-color: rgba(234, 237, 237, 0.9);
+    --txt-header-color: rgba(0, 0, 0, 0.7);
+    --bg-card-header: lightgrey;
+    --yellow: rgba(241, 196, 15);
+    --orange: #FA8705;
+}
+
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#header {
+    display: flex;
+    position: fixed;
+    background: var(--bg-color);
+    padding: 0.5em 2.5em;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+#header-img {
+    width: 5em;
+    height: auto;
+    align-self: center;
+    margin:0 10px;
+}
+
+#header-title {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 2em;
+    font-family: 'Xanh Mono', 'monospace';
+    color: var(--txt-header-color);
+}
+
+#nav-bar {
+    align-self: center;
+    margin-left: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-link {
+    margin:0 3em;
+    color: var(--txt-header-color);
+    text-decoration: none;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px;
+    background: var(--bg-color);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form {
+    width: 100%;
+}
+
+#email {
+    display: block;
+    line-height: 2em;
+    width: 70%;
+    margin: auto;
+}
+
+#submit {
+    display: block;
+    margin: 10px auto 0; 
+    border-radius: 2px;
+    width: 150px; 
+    height: 35px;
+    line-height: 35px;
+    font-size: 1em;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: var(--yellow);
+    border: transparent;
+    cursor: pointer;
+    transition: background-color 1s;
+}
+
+#submit:hover {
+    background: var(--orange);
+}
+
+.features {
+    position: relative;
+    margin: 5em 0 1em 15%;
+    width: 60%;
+    align-self: center;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.feature-title {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.features p {
+    margin: 0;
+    padding: 0 0 4em;
+}
+
+.material::before {
+    position: absolute;
+    top: -0.1em;
+    left: -2.4em;
+    font-family: "Font Awesome 5 Free";
+    content: "\f06d";
+    font-weight: 900;
+    font-size: 3em;
+    color: var(--orange);
+}
+
+.transport::before {
+    position: absolute;
+    top:  2.5em;
+    left: -2.5em;
+    font-family: "Font Awesome 5 Free";
+    content: "\f0d1";
+    font-weight: 900;
+    font-size: 3em;
+    color: var(--orange);
+}
+
+.assurance::before {
+    position: absolute;
+    top: 5.2em;
+    left: -2.5em;
+    font-family: "Font Awesome 5 Free";
+    content: "\f241";
+    font-weight: 900;
+    font-size: 3em;
+    color: var(--orange);                                     
+}
+
+.price-container {
+    display: flex;
+    margin-top: 4em;
+}
+.card {
+    position: relative;
+    border: 1px solid;
+    border-radius: 5px;
+    width: 300px;
+    height: 350px;
+    margin: 0 0.5em;
+    text-align: center;
+    font-family: Roboto;
+}
+ h4 {
+     font-size: 1.5em;
+     margin-bottom: 1em;
+ }
+
+.card-title {
+    background-color: var(--bg-card-header);
+    width: 100%px;
+    margin: 0;
+    line-height: 3em;
+}
+
+.card a {
+    text-decoration: none;
+    border: 1px solid transparent;
+    background: var(--yellow);
+    color: rgba(0, 0, 0, 0.85);
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 400;
+    padding: 10px 20px;
+    border-radius: 2px; 
+    position: absolute;
+    bottom: 1em;
+    left: 33%;
+    transition: background-color 1s;
+}
+
+.card a:hover {
+    background: var(--orange);
+}
+
+footer {
+    width: 65%;
+    text-align: right;
+    background:var(--bg-card-header);
+    margin-top: 30px;
+    padding: 20px 5px;
+    font-family: Roboto;
+    color:rgba(0, 0, 0, 0.6);
+}
+
+footer a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.9);
+    padding: 0 10px;
+}
+
+footer p {
+    padding-right: 10px;
+}
+
+@media only screen and (max-width: 980px) {
+    #header {
+        flex-direction: column;
+        align-items: center;
+    }
+    #nav-bar {
+        margin-left: 0;
+        padding-left: 1em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .nav-link   {
+        margin: 0 1.5em;
+    }
+}
+
+
